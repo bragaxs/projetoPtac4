@@ -1,17 +1,22 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./Pages/Home";      
+// src/Router.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginUsuario from "./Pages/Usuarios/loginUsuario";
+import CadastroUsuario from "./Pages/Usuarios/cadastroUsuario";
+import Cardapio from "./Pages/Cardapio/CardapioA";
+import Reservas from "./Pages/Reservas/Reservas";
+import MinhasReservas from "./Pages/Reservas/MinhasReservas";
 
-function Routes(){
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home/>}></Route>
-                <Route path="/Reservas" element={<Reservas/>}></Route>
-                <Route path="/Mesas" element={<Mesas/>}></Route>
-                <Route path="/CadastrarMesa" element={<CadastrarMesa/>}></Route>
-                <Route path="/AtualizarMesa" element={<AtualizarMesa/>}></Route>
-            </Routes>
-        </BrowserRouter>
-    )
+export default function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginUsuario />} />
+        <Route path="/cadastro" element={<CadastroUsuario />} />
+        <Route path="/cardapio" element={<Cardapio />} />
+        <Route path="/reservar" element={<Reservas />} />
+        <Route path="/minhas-reservas" element={<MinhasReservas />} />
+        <Route path="*" element={<LoginUsuario />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-export default Routes

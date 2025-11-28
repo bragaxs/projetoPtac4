@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Cadastro from "./pages/Cadastro";
-import Cardapio from "./pages/Cardapio";
-import Reservas from "./pages/Reservas";
-import MinhasReservas from "./pages/MinhasReservas";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Cadastro from "./Pages/Cadastro";
+import Cardapio from "./Pages/Cardapio";
+import Reservas from "./Pages/Reservas";
+import MinhasReservas from "./Pages/MinhasReservas";
 
 export default function Router() {
   return (

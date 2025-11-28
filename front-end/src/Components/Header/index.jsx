@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../global.css";
 
+
 export default function Header() {
   return (
     <header className="header">

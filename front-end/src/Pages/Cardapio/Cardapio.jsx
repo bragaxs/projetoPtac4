@@ -1,6 +1,3 @@
-import "../global.css";
-
-
 export default function Cardapio() {
 return (
 <main>

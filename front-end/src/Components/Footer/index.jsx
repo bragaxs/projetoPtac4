@@ -1,12 +1,11 @@
-import styles from './Footer.module.css';
-import { Link } from 'react-router-dom'
+import "../global.css";
 
-function Footer() {
-  return (
-    <footer className={styles.footer}>
-      Feito com carinho para você. Volte sempre!!
-    </footer>
-  );
+
+export default function Footer() {
+return (
+<footer>
+<p>xxxxxx (99) 99999-9999 - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>&copy; Restaurante Casual</p>
+</footer>
+);
 }
-
-export default Footer;

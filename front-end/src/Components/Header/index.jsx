@@ -1,18 +1,25 @@
-import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import "../global.css";
 
-function Header() {
+export default function Header() {
   return (
-    <header className={styles.header}>
-      <span>Sambariló Foods</span>
-      <nav>
-        <Link to="/iniciar">Iniciar</Link>
-        <Link to="/cadastro">Cadastro</Link>
-        <Link to="/perfil">Perfil</Link>
-        <Link to="/atualizar-perfil">Atualizar Perfil</Link>
+    <header className="header">
+      <div className="brand">
+        <div className="logo">RC</div>
+        <div className="brand-text">
+          <h1>Restaurante Casual</h1>
+          <p>Delícias caseiras — atendimento acolhedor</p>
+        </div>
+      </div>
+
+      <nav className="nav">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/cardapio" className="nav-link">Cardápio</Link>
+        <Link to="/reservas" className="nav-link">Reservas</Link>
+        <Link to="/minhas-reservas" className="nav-link">Minhas Reservas</Link>
+        <Link to="/cadastro" className="nav-link">Cadastro</Link>
+        <Link to="/login" className="nav-link">Login</Link>
       </nav>
     </header>
   );
 }
-
-export default Header;

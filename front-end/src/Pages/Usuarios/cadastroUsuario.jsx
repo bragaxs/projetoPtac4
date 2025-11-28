@@ -1,31 +1,21 @@
-import { useState } from "react";
-import axios from "axios";
+import "../global.css";
+
 
 export default function Cadastro() {
-  const [form, setForm] = useState({});
-
-  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const cadastrar = async () => {
-    await axios.post("http://localhost:3001/auth/register", form);
-    alert("Cadastrado!");
-  };
-
-  return (
-    <div>
-      <h1>Cadastro</h1>
-
-      <input name="nome" placeholder="Nome" onChange={onChange} />
-      <input name="sobrenome" placeholder="Sobrenome" onChange={onChange} />
-      <input name="email" placeholder="Email" onChange={onChange} />
-      <input name="senha" placeholder="Senha" onChange={onChange} />
-      <input name="rua" placeholder="Rua" onChange={onChange} />
-      <input name="numero" placeholder="Número" onChange={onChange} />
-      <input name="bairro" placeholder="Bairro" onChange={onChange} />
-      <input name="cidade" placeholder="Cidade" onChange={onChange} />
-      <input name="uf" placeholder="UF" onChange={onChange} />
-
-      <button onClick={cadastrar}>Cadastrar</button>
-    </div>
-  );
+return (
+<main>
+<h1>Cadastro</h1>
+<form>
+<input type="text" placeholder="Nome" />
+<input type="text" placeholder="Sobrenome" />
+<input type="email" placeholder="E-mail" />
+<input type="text" placeholder="Rua" />
+<input type="number" placeholder="Nº" />
+<input type="text" placeholder="Bairro" />
+<input type="text" placeholder="Cidade" />
+<input type="text" placeholder="UF" />
+<button>Cadastrar</button>
+</form>
+</main>
+);
 }

@@ -1,42 +1,33 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-
-import VerMesa from './Pages/Mesas/VerMesa';
-import AtualizarMesa from './Pages/Mesas/AtualizarMesa';
-import CadastrarMesa from './Pages/Mesas/CadastrarMesa';
-import ReservarMesa from './Pages/Mesas/ReservarMesa';
 
 import Home from "./Pages/Home";
-import Login from "./Pages/Login";
-import Cadastro from "./Pages/Cadastro";
-import Cardapio from "./Pages/Cardapio";
-import Reservas from "./Pages/Reservas";
-import MinhasReservas from "./Pages/MinhasReservas";
+import Cardapio from "./pages/Cardapio";
+import Cadastro from "./pages/Cadastro";
+import Login from "./pages/Login";
+import Reservas from "./pages/Reservas";
+import MinhasReservas from "./pages/MinhasReservas";
 
-function App() {
-  return (
-    <Router>
-      <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/cardapio" element={<Cardapio />} />
-        <Route path="/reservas" element={<Reservas />} />
-        <Route path="/minhas-reservas" element={<MinhasReservas />} />
-        <Route path="/ver-mesas" element={<VerMesa />} />
-        <Route path="/atualizar-mesa" element={<AtualizarMesa />} />
-        <Route path="/cadastrar-mesa" element={<CadastrarMesa />} />
-        <Route path="/reservar-mesa" element={<ReservarMesa />} />
-      </Routes>
+export default function App() {
+return (
+<BrowserRouter>
+<Header />
 
-      <Footer />
-    </Router>
-  );
+
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/cardapio" element={<Cardapio />} />
+<Route path="/cadastro" element={<Cadastro />} />
+<Route path="/login" element={<Login />} />
+<Route path="/reservas" element={<Reservas />} />
+<Route path="/minhas-reservas" element={<MinhasReservas />} />
+</Routes>
+
+
+<Footer />
+</BrowserRouter>
+);
 }
-
-export default App;

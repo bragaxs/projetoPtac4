@@ -2,7 +2,7 @@ import '../../App.css';
 import Header from '.../../Components/Header';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
-import '../Mesas/global.css';
+
 
 function CadastrarMesa() {
   return (

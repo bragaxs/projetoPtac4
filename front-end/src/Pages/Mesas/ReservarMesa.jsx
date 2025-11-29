@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../App.css";
 import Header from ".../../Components/Header";
 import Footer from ".../../Components/Footer";
-import "../Mesas/global.css";
+
 
 function ReservarMesa() {
   const [mesa, setMesa] = useState("");
